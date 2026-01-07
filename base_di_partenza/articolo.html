@@ -18,9 +18,14 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body>
+  <body id="top">
     <header>
-      <div>
+      <div class="fixed-buttons">
+        <a href="#" class="btn btn-1">📄</a>
+        <a href="#" class="btn btn-2">📅</a>
+      </div>
+
+      <div class="brand">
         <img
           src="./assets/img/logo.svg"
           alt="logo del blog"
@@ -31,16 +36,18 @@
       </div>
       <nav>
         <ul>
-          <li><a href="index.html" title="Home Page">Home</a></li>
+          <li><a href="./index.html" title="Home Page">Home</a></li>
           <li>
             <a
-              href="articoli.html"
+              href="./articoli.html"
               title="Elenco degli articoli tecnici pubblicati"
               >Articoli</a
             >
           </li>
           <li>
-            <a href="contatti.html" title="Candidati inviando un tuo cv">Job</a>
+            <a href="./contatti.html" title="Candidati inviando un tuo cv"
+              >Job</a
+            >
           </li>
         </ul>
       </nav>
@@ -49,13 +56,20 @@
     <hr />
 
     <main>
-      <article>
+      <article class="clearfix">
         <h1>Come creare un template per i post</h1>
+        <img src="./assets/img/underline.svg" class="lineaBlu" />
         <p>
           <i class="fas fa-pen-square"></i> di Mario Rossi -
           <span><i class="fas fa-clock"></i> pubblicato il 25-10-2020</span>
         </p>
-        <img src="./assets/img/badge.png" class="badge" />
+        <img
+          src="./assets/img/badge.png"
+          class="imgLeft"
+          alt="logo Html5"
+          width="70"
+          height="70"
+        />
         <p>
           La prima cosa da fare è suddividere in blocchi logici la pagina,
           identificando le <strong>parti comuni</strong> da applicare a tutte le
@@ -75,7 +89,7 @@
           </li>
         </ul>
 
-        <h3>Formattazione del codice</h3>
+        <h2>Formattazione del codice</h2>
         <p>
           Il testo dell'articolo dovrà essere formattato per identificare tutte
           le parti da <strong>selezionare con i CSS</strong>. Perciò i passi
@@ -149,7 +163,7 @@
           dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto
           il nostro obiettivo ed essere stati dei veri developers come loro:
         </p>
-<div class="contieni">
+
         <iframe
           width="300"
           height="300"
@@ -159,8 +173,8 @@
           allowfullscreen
         ></iframe>
 
-        <section>
-          <h2>Novità</h2>
+        <section class="box">
+          <h2 class="novita">Novità</h2>
           <p>
             Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla
             nostra newsletter:
@@ -180,13 +194,12 @@
           </form>
         </section>
       </article>
-</div>
- <h2 class="articoli">Articoli correlati</h2>
+
       <aside>
-       
+        <h2>Articoli correlati</h2>
         <div>
           <a
-            href="post2.html"
+            href="./post2.html"
             title="Passaggi guidati per validare correttamente tutto il codice sviluppato"
             >Validare il codice HTML</a
           >
@@ -196,7 +209,7 @@
 
         <div>
           <a
-            href="post3.html"
+            href="./post3.html"
             title="Passaggi guidati per controllare e correggere tutto il codice sviluppato"
             >Correggere la sintassi</a
           >
@@ -206,7 +219,7 @@
 
         <div>
           <a
-            href="post4.html"
+            href="./post4.html"
             title="Consigli ed approcci per ridurre il peso della pagina"
             >Meno Kb nella pagina</a
           >
@@ -219,18 +232,22 @@
     <hr />
 
     <footer>
-      <div class="contienifoot">
       <p>Blog Epicode &copy;2021</p>
       <address>
         Testata online di Mario Rossi, registrata con prot. n.213/2018 - via
-        Luigi Einaudi 2 <br/>- Milano. P.IVA 00112233.
+        Luigi Einaudi 2 - Milano. P.IVA 00112233.
         <a
           href="mailto:info@epicode.school"
           title="contattami per informazioni/lavoro/privacy"
           >info@epicode.school</a
         >
       </address>
-      </div>
+      <a href="#top" class="to-top" aria-label="Torna in cima">▲</a>
+
+      <!-- href="#top" = quando clicchi, vai all'elemento con id="top" -->
+      <!-- class="to-top" = ci agganciamo col CSS -->
+      <!-- aria-label = testo per accessibilità (screen reader) -->
+      <!-- ⬆ = icona (puoi cambiarla con un'icona font o SVG) -->
     </footer>
   </body>
 </html>
